@@ -1,0 +1,11 @@
+go to port 8080 http page, create an account and look for commits concerning tomcat
+username="tomcat" password="42MrHBf*z8{Z%"
+
+go back to the https page, dirbuster it and find /manager/status. The page requires connection, use the creds you found.
+-> Tomcat Server status page
+
+status/..;/
+
+msfvenom java/shell/reverse_tcp or java/meterpreter/reverse_tcp (neither worked for the moment, try again after reloading the machine)
+
+exploit 47892
