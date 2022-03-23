@@ -1,0 +1,7 @@
+#!/bin/bash
+#FILES="~/my_data/intelligence/pdfs/*"
+FILES=$(ls ~/my_data/intelligence/pdfs)
+for filename in $FILES
+do
+	$(strings "./pdfs/$filename")
+done

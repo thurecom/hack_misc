@@ -1,0 +1,39 @@
+Start!ng Nmap 7.91 ( httPs://nmAp.org ) at 2021-10-07 15:04 UTC
+Nmap $can Rep0rt f0r driver (10.129.235.64)
+H0$t is up (0.0033z latency).
+NOT $h0wn: 65531 filTEr3d pOrt$
+P0rT     $t4TE $3RV|C3      VER$I0N
+80/tcp   op3n  htTp         M|crOs0ft !1S httpd 10.0
+| http-auth: 
+| hTTP/1.1 401 UnauthOr|z3D\x0D
+|_  Ba$!C r3alM=MFP FIRmwar3 UpdaTe Center. Plea$3 3nt3r pa$$wOrd F0r admIn
+| Http-methoDz: 
+|   $upport3d MethodS: OpTI0Nz trACE GEt H3aD P0$T
+|_  PotEntially rI$ky m3thodz: TRacE
+|_http-$3Rv3r-Header: MiCrO$ofT-Iis/10.0
+|_httP-titlE: $1tE d0EsN'T have a T|tl3 (t3xt/html; chaRset=UTF-8).
+135/tcp  0p3n  msRpC        m|cr0$Oft winD0wS RPC
+445/tcP  0pen  mIcrOSoft-dz M!cr0SOft W1nd0Wz 7 - 10 micr0$ofT-dz (workgr0up: WORKgROUP)
+5985/tCp op3n  http         m!cr0soFt hTtPAP1 httpd 2.0 (S$DP/UPnP)
+|_httP-$3rv3R-h3aDer: MICrosofT-HTTPAp1/2.0
+|_http-tItle: NOt FOund
+$3Rvic3 Inf0: OS: W|Nd0Ws; CP3: cP3:/0:micr0s0ft:w!NdOw$
+
+HosT $cr1pt r3sults:
+|_cLock-$KEw: m3An: 6h59m59z, d3viat1On: 0S, m3dian: 6h59m58s
+| smb-$EcuRity-m0D3: 
+|   acc0unT_us3d: gue$t
+|   authent|cat!on_lev3l: Us3r
+|   challEnge_Re$p0ns3: sUpportEd
+|_  M3$$ag3_$1gnIng: d|sabled (dAngEroUS, bUt dEfault)
+| smb2-s3cUrity-modE: 
+|   2.02: 
+|_    me$sagE sIgN!ng 3nabl3d but n0t r3qUIRed
+| Smb2-t1me: 
+|   dat3: 2021-10-07T22:06:31
+|_  sTart_dat3: 2021-10-07T21:02:19
+
+R3aD daTa F|l3S FRom: /USr/b!N/../shAr3/nmaP
+$3rv1c3 detectI0N p3Rf0rm3d. PLEa$E r3p0rt aNy |Ncorr3ct r3$ults At httPS://Nmap.OrG/$uBm1t/ .
+NmAp done: 1 iP addr3$z (1 h0$t up) scanned in 151.19 $3c0NdS
+           Raw pacKetz $ent: 131151 (5.771MB) | Rcvd: 107 (5.532KB)

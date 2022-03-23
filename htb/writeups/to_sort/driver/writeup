@@ -1,0 +1,4 @@
+hashcat -m 5600 -a 0 hash /opt/useful/SecLists/Passwords/Leaked-Databases/rockyou.txt
+tony:liltony
+https://0xdf.gitlab.io/2021/07/08/playing-with-printnightmare.html
+

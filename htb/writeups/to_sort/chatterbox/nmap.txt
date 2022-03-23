@@ -1,0 +1,97 @@
+\u2500[\u2717]\u2500[htb-riggel@htb-3gymyz0v4t]\u2500[~]
+\u2514\u2500\u2500\u257c $sudo nmap -p- -T4 -A 10.129.194.11 -v
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-26 12:42 UTC
+NSE: Loaded 153 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Initiating Ping Scan at 12:42
+Scanning 10.129.194.11 [4 ports]
+Completed Ping Scan at 12:42, 0.05s elapsed (1 total hosts)
+Initiating SYN Stealth Scan at 12:42
+Scanning chatterbox.htb (10.129.194.11) [65535 ports]
+SYN Stealth Scan Timing: About 2.27% done; ETC: 13:05 (0:22:12 remaining)
+SYN Stealth Scan Timing: About 5.47% done; ETC: 13:04 (0:21:01 remaining)
+Stats: 0:02:08 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 9.67% done; ETC: 13:04 (0:19:56 remaining)
+SYN Stealth Scan Timing: About 14.68% done; ETC: 13:04 (0:18:48 remaining)
+SYN Stealth Scan Timing: About 19.71% done; ETC: 13:04 (0:17:39 remaining)
+Stats: 0:05:12 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 23.64% done; ETC: 13:04 (0:16:44 remaining)
+SYN Stealth Scan Timing: About 28.84% done; ETC: 13:04 (0:15:38 remaining)
+Stats: 0:07:19 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 33.31% done; ETC: 13:04 (0:14:37 remaining)
+SYN Stealth Scan Timing: About 38.51% done; ETC: 13:04 (0:13:30 remaining)
+Discovered open port 9256/tcp on 10.129.194.11
+SYN Stealth Scan Timing: About 46.76% done; ETC: 13:01 (0:10:11 remaining)
+SYN Stealth Scan Timing: About 72.01% done; ETC: 12:55 (0:03:40 remaining)
+Discovered open port 9255/tcp on 10.129.194.11
+Completed SYN Stealth Scan at 12:52, 590.33s elapsed (65535 total ports)
+Initiating Service scan at 12:52
+Scanning 2 services on chatterbox.htb (10.129.194.11)
+Completed Service scan at 12:52, 2.31s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against chatterbox.htb (10.129.194.11)
+Retrying OS detection (try #2) against chatterbox.htb (10.129.194.11)
+Initiating Traceroute at 12:52
+Completed Traceroute at 12:52, 0.03s elapsed
+Initiating Parallel DNS resolution of 1 host. at 12:52
+Completed Parallel DNS resolution of 1 host. at 12:52, 0.00s elapsed
+NSE: Script scanning 10.129.194.11.
+Initiating NSE at 12:52
+Completed NSE at 12:52, 15.13s elapsed
+Initiating NSE at 12:52
+Completed NSE at 12:52, 0.00s elapsed
+Initiating NSE at 12:52
+Completed NSE at 12:52, 0.00s elapsed
+Nmap scan report for chatterbox.htb (10.129.194.11)
+Host is up (0.018s latency).
+Not shown: 65533 filtered ports
+PORT     STATE SERVICE    VERSION
+9255/tcp open  tcpwrapped
+9256/tcp open  tcpwrapped
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|phone|specialized
+Running (JUST GUESSING): Microsoft Windows 8|Phone|2008|7|8.1|Vista|2012 (92%)
+OS CPE: cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2012
+Aggressive OS guesses: Microsoft Windows 8.1 Update 1 (92%), Microsoft Windows Phone 7.5 or 8.0 (92%), Microsoft Windows 7 or Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 or Windows 8.1 (91%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (91%), Microsoft Windows 7 (91%), Microsoft Windows 7 Professional or Windows 8 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.017 days (since Thu Aug 26 12:28:16 2021)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Incremental
+
+TRACEROUTE (using port 9256/tcp)
+HOP RTT      ADDRESS
+1   17.86 ms 10.10.14.1
+2   18.04 ms chatterbox.htb (10.129.194.11)
+
+NSE: Script Post-scanning.
+Initiating NSE at 12:52
+Completed NSE at 12:52, 0.00s elapsed
+Initiating NSE at 12:52
+Completed NSE at 12:52, 0.00s elapsed
+Initiating NSE at 12:52
+Completed NSE at 12:52, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 613.09 seconds
+           Raw packets sent: 131211 (5.777MB) | Rcvd: 201 (14.308KB)
+\u250c\u2500[htb-riggel@htb-3gymyz0v4t]\u2500[~]
+\u2514\u2500\u2500\u257c $sudo nmap -sV -sC -p9255,9256 10.129.194.11
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-26 13:00 UTC
+Nmap scan report for chatterbox.htb (10.129.194.11)
+Host is up (0.019s latency).
+
+PORT     STATE SERVICE VERSION
+9255/tcp open  http    AChat chat system httpd
+|_http-server-header: AChat
+|_http-title: Site doesn't have a title.
+9256/tcp open  achat   AChat chat system
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.53 seconds
+

