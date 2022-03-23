@@ -1,0 +1,2 @@
+https://gtfobins.github.io/
+https://swcarpentry.github.io/shell-novice/07-find/index.html
