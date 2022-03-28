@@ -1,5 +1,9 @@
 ## Sec
 
+### Reverse Shell
+
+https://book.hacktricks.xyz/pentesting/pentesting-remote-gdbserver
+
 ### PrivEsc
 
 https://gtfobins.github.io/
