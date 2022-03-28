@@ -1,9 +1,9 @@
-env IP=10.129.124.102
+export IP=10.129.124.102
 
 ## ENUMERATION :
 
 ```bash
-Nmap 7.92 scan initiated Wed Mar 23 13:06:03 2022 as: nmap -sC -sV -p- -oN ./nmap.txt -vvv 10.129.124.102
+Nmap 7.92 scan initiated Wed Mar 23 13:06:03 2022 as: nmap -sC -sV -p- -oN ./nmap.txt -vvv IP
 Nmap scan report for 10.129.131.8
 Host is up, received syn-ack (0.052s latency).
 Scanned at 2022-03-23 13:06:03 GMT for 62s
