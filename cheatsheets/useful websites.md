@@ -14,6 +14,13 @@ https://gtfobins.github.io/
 
 https://zsahi.wordpress.com/2018/09/10/file-inclusion/
 
+## General Pentesting
+
+### LDAP
+
+* https://github.com/m8r0wn/ldap_search
+* https://book.hacktricks.xyz/pentesting/pentesting-ldap
+
 # QoL
 
 ## Find Files in UNIX
