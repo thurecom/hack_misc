@@ -1,4 +1,3 @@
-% -nmap -sC -sV -p- [IP]
 scp [source] [dest] (dest htb == username@hostname:dirpath)
 pwnbox wordlists 
 	 -/opt/useful/SecLists/Usernames/Names/names.txt
